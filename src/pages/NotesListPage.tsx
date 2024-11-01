@@ -1,23 +1,26 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
-import NotePage from './NotePage';
-import { Note } from '../store/notes/types';
+import NoteListItem from '../components/NoteListItem';
+import HomeButton from '../components/HomeButton';
 
-interface NoteListProps {
-  onEdit: (note: Note) => void;
-}
+const NoteList: React.FC = () => {
+    const notes = useSelector((state: RootState) => state.notes.notes);
 
-const NoteList: React.FC<NoteListProps> = ({ onEdit }) => {
-  const notes = useSelector((state: RootState) => state.notes.notes);
-
-  return (
-    <div>
-      {notes.map(note => (
-        <NotePage key={note.id} note={note} onEdit={onEdit} />
-      ))}
-    </div>
-  );
+    return (
+        <div>
+        {<HomeButton path='/' name='На главную'/>}
+        {notes.length > 0 ?
+            notes.map(note => (
+                <NoteListItem key={note.id} note={note} />
+            ))
+        : 
+            <div>
+                <h1>У вас пока еще нет заметок</h1>
+            </div>
+        }
+        </div>
+    );
 };
 
 export default NoteList;

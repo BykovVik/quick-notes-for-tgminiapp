@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { useDispatch } from "react-redux";
 import { addNote, editNote } from "../store/notes/notesSlise";
 import { Note } from "../store/notes/types";
+import { useNavigate } from "react-router-dom";
 
 interface NoteFormProps {
     existingNote?: Note;
@@ -10,6 +11,7 @@ interface NoteFormProps {
 const NoteForm: React.FC<NoteFormProps> = ({existingNote}) => {
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const [title, setTitle] = useState(existingNote ? existingNote.title : '')
     const [body, setBody] = useState(existingNote ? existingNote.body : '')
     const [category, setCategory] = useState(existingNote ? existingNote.category : 'Work')
@@ -27,6 +29,7 @@ const NoteForm: React.FC<NoteFormProps> = ({existingNote}) => {
         setTitle('')
         setBody('')
         setCategory('Work')
+        navigate('/list')
     }
 
     return (
