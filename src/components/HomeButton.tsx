@@ -15,7 +15,10 @@ const HomeButton: React.FC<buttonProps> = ({path, name}) => {
     }
 
     return (
-        <button onClick={clickHanler}>{name}</button>
+        <div>
+            <button className="HomeButton" onClick={clickHanler}>{name}</button>
+            <hr />
+        </div>
     )
 }
 export default HomeButton

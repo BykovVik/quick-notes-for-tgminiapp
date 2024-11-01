@@ -3,8 +3,49 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #ffffff;
 }
-.CenteredBox :first-child {
+.CenteredBox {
     display: flex;
     flex-direction: column;
+    padding: 0 25px;
+}
+.LogoBox {
+    background-color: #ebe4f9;
+}
+.LogoBox > img {
+    width: 100%;
+}
+.TitleBox {
+    line-height: 1px;
+}
+.TitleBox > p {
+    color: grey;
+    font-size: 55px;
+}
+.TitleBox > h3 {
+    color: #1c1c1c;
+    font-size: 75px;
+}
+.But {
+    margin-bottom: 15px;
+    font-size: 22px;
+    padding: 10px 50px;
+    border: 2px solid #1c1c1c;
+    outline: none;
+}
+.Block {
+    background-color: #1c1c1c;
+    color: white;
+}
+.Empty {
+    background-color: none;
+    color: #1c1c1c;
+}
+.HomeButton {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 35px;
+    font-weight: bold;
 }
