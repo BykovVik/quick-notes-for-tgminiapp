@@ -1,8 +1,6 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { deleteNote } from "../store/notes/notesSlise";
-import { Note } from "../store/notes/types";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Note } from '../store/notes/types';
+import { useNavigate } from 'react-router-dom';
 
 interface NoteItemProps {
     note: Note;
@@ -10,14 +8,12 @@ interface NoteItemProps {
 
 const NoteListItem: React.FC<NoteItemProps> = ({note}) => {
 
-    const dispatch = useDispatch()
     const navigate = useNavigate()
+    const data = new Date(Number(note.id))
 
-    const handleDelete = () => {
-        dispatch(deleteNote(note))
-    }
+
     const clickHandler = () => {
-        navigate(`/note/${note.id}`)
+        note ? navigate(`/note/${note.id}`) : navigate('/list')
     }
 
     return (
@@ -25,7 +21,7 @@ const NoteListItem: React.FC<NoteItemProps> = ({note}) => {
             <h3>{note.title}</h3>
             <p>{note.body}</p>
             <p>Category: {note.category}</p>
-            <button onClick={handleDelete}>Delete</button>
+            <p>Date: {data.toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </div>
     )
 }

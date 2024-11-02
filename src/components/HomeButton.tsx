@@ -1,12 +1,14 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { IconType } from 'react-icons';
 
 interface buttonProps {
     path: string;
     name: string;
+    Icon?: IconType;
 }
 
-const HomeButton: React.FC<buttonProps> = ({path, name}) => {
+const HomeButton: React.FC<buttonProps> = ({path, name, Icon}) => {
 
     const navigate = useNavigate()
 
@@ -15,8 +17,15 @@ const HomeButton: React.FC<buttonProps> = ({path, name}) => {
     }
 
     return (
-        <div>
-            <button className="HomeButton" onClick={clickHanler}>{name}</button>
+        <div className='BasePadding'>
+            <button className='HomeButton' onClick={clickHanler}>
+                <span className='IconSpan'>
+                    {Icon && <Icon />}
+                </span>
+                <span>
+                    {name}
+                </span>
+            </button>
             <hr />
         </div>
     )

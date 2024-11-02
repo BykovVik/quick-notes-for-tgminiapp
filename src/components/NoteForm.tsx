@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import { useDispatch } from "react-redux";
-import { addNote, editNote } from "../store/notes/notesSlise";
-import { Note } from "../store/notes/types";
-import { useNavigate } from "react-router-dom";
+import React, {useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { addNote, editNote } from '../store/notes/notesSlise';
+import { Note } from '../store/notes/types';
+import { useNavigate } from 'react-router-dom';
 
 interface NoteFormProps {
     existingNote?: Note;
@@ -34,14 +34,14 @@ const NoteForm: React.FC<NoteFormProps> = ({existingNote}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required />
-            <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder="Body" required />
+            <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder='Title' required />
+            <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder='Body' required />
             <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                <option value="Work">Work</option>
-                <option value="Personal">Personal</option>
-                <option value="Shopping">Shopping</option>
+                <option value='Work'>Work</option>
+                <option value='Personal'>Personal</option>
+                <option value='Shopping'>Shopping</option>
             </select>
-            <button type="submit">{existingNote ? 'Edit Note' : 'Add Note'}</button>
+            <button className='But Block' type='submit'>{existingNote ? 'Edit Note' : 'Add Note'}</button>
         </form>
     )
 }

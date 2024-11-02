@@ -1,13 +1,42 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+img {
+    width: 100%;
+}
+a {
+    color: #ebe4f9;
+    text-decoration: none;
+}
+.BasePadding {
+    padding: 0 25px;
+}
+.MainColor {
+    background-color: white;
+}
+.SecondColor {
+    background-color: #ebe4f9;
+}
+.ButtonColor {
+    background-color: #1c1c1c;
+}
+.Block {
+    background-color: #1c1c1c;
+    color: white;
+}
+.Empty {
+    background-color: none;
+    color: #1c1c1c;
+}
+.IconSpan {
+    vertical-align: middle;
 }

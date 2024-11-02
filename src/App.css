@@ -1,20 +1,48 @@
 .Container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color: #ffffff;
 }
-.CenteredBox {
+.ContentBox {
+    flex-grow: 1;
+}
+.HomeButton {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 35px;
+    font-weight: bold;
+    color: #1c1c1c;
+    padding-top: 25px;
+}
+.Footer {
+    background-color: #1c1c1c;
+    color: white;
+    margin-top: auto;
+    padding-bottom: 25px;
+}
+.Footer > p {
+    font-size: 16px;
+}
+form {
     display: flex;
     flex-direction: column;
-    padding: 0 25px;
 }
-.LogoBox {
-    background-color: #ebe4f9;
+.FormWrap {
+    display: flex;
+    height: 100%;
 }
-.LogoBox > img {
+.FormWrap > div {
     width: 100%;
+    align-self: center;
+}
+input, textarea, select {
+    background-color: #ebe4f9;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
 }
 .TitleBox {
     line-height: 1px;
@@ -34,18 +62,26 @@
     border: 2px solid #1c1c1c;
     outline: none;
 }
-.Block {
-    background-color: #1c1c1c;
-    color: white;
+.NotesBoxWrap {
+    height: 100%;
+    display: flex;
 }
-.Empty {
-    background-color: none;
-    color: #1c1c1c;
+.EmptyBox {
+    width: 100%;
+    align-self: center;
+    text-align: center;
 }
-.HomeButton {
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 35px;
-    font-weight: bold;
+.NotesBox {
+    width: 100%;
+    padding: 0 15px;
+    height: 500px;
+    align-self: center;
+    overflow-y: auto;
+    border-left: 10px solid #f6bdc8;
+}
+.ItemWrap {
+    background-color: #ebe4f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
