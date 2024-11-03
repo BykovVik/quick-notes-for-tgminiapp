@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import notesReducer from "./notes/notesSlise"
+import notesReducer, {subscribeToStore} from "./notes/notesSlise"
 
 const store = configureStore({
     reducer: {
@@ -9,5 +9,7 @@ const store = configureStore({
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
+
+subscribeToStore(store);
 
 export default store

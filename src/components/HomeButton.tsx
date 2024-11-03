@@ -19,12 +19,7 @@ const HomeButton: React.FC<buttonProps> = ({path, name, Icon}) => {
     return (
         <div className='BasePadding'>
             <button className='HomeButton' onClick={clickHanler}>
-                <span className='IconSpan'>
-                    {Icon && <Icon />}
-                </span>
-                <span>
-                    {name}
-                </span>
+                <span className='IconSpan'>{Icon && <Icon />}</span> <span>{name}</span>
             </button>
             <hr />
         </div>

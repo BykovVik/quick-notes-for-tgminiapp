@@ -1,10 +1,18 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Note, NoteState } from "./types";
 
-const initialState: NoteState = {
-    notes: [],
-    categories: ['Work', 'Personal', 'Shopping']
-}
+const loadStateFromLocalStorage = (): NoteState => {
+    const savedState = localStorage.getItem('notesState');
+    if (savedState) {
+        return JSON.parse(savedState);
+    }
+    return {
+        notes: [],
+        categories: ['Work', 'Personal', 'Shopping']
+    };
+};
+
+const initialState: NoteState = loadStateFromLocalStorage();
 
 const notesSlice = createSlice({
     name: 'notes',
@@ -25,5 +33,15 @@ const notesSlice = createSlice({
     }
 })
 
+const saveStateToLocalStorage = (state: NoteState) => {
+    localStorage.setItem('notesState', JSON.stringify(state));
+};
+
 export const {addNote, editNote, deleteNote} = notesSlice.actions;
 export default notesSlice.reducer
+
+export const subscribeToStore = (store: any) => {
+    store.subscribe(() => {
+        saveStateToLocalStorage(store.getState().notes);
+    });
+};

@@ -19,9 +19,9 @@ const NoteListItem: React.FC<NoteItemProps> = ({note}) => {
     return (
         <div onClick={clickHandler}>
             <h3>{note.title}</h3>
-            <p>{note.body}</p>
-            <p>Category: {note.category}</p>
-            <p>Date: {data.toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p>{note.body.slice(0, 100)}</p>
+            <p><b>Category: </b>{note.category}</p>
+            <p><b>Date: </b>{data.toLocaleDateString('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </div>
     )
 }
