@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/quick-notes-for-tgminiapp/static/css/main.1139a0fd.css",
+    "main.js": "/quick-notes-for-tgminiapp/static/js/main.a7aba781.js",
+    "static/media/logo.png": "/quick-notes-for-tgminiapp/static/media/logo.85df187ab68ee0a7a35f.png",
+    "index.html": "/quick-notes-for-tgminiapp/index.html",
+    "main.1139a0fd.css.map": "/quick-notes-for-tgminiapp/static/css/main.1139a0fd.css.map",
+    "main.a7aba781.js.map": "/quick-notes-for-tgminiapp/static/js/main.a7aba781.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1139a0fd.css",
+    "static/js/main.a7aba781.js"
+  ]
+}

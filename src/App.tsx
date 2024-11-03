@@ -23,11 +23,11 @@ function App() {
         <OrientationDetector onOrientationChange={handleOrientationChange} />
             {orientation === 'landscape'&&
                 <div className="landscapeDisplay">
-                    <h3>Приложение работает исключительно в портретном режиме</h3>
+                    <h3>The app only works in portrait mode</h3>
                 </div>
         }
         {orientation === 'portrait'&&
-            <Router basename=''>
+            <Router basename={'/quick-notes-for-tgminiapp'}>
                 <Routes>
                     <Route path='/' element={<HomePage />}></Route>
                     <Route path='/list' element={<NoteList />}></Route>
