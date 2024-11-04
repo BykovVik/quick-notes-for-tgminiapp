@@ -22,7 +22,6 @@
     background: none;
     border: none;
     outline: none;
-    font-size: 35px;
     font-weight: bold;
     color: #1c1c1c;
     padding-top: 25px;
@@ -55,21 +54,20 @@ input, textarea, select {
     border: none;
     font-size: 18px;
 }
+.LogoBox {
+    padding: 0;
+}
 .TitleBox {
     line-height: 1px;
 }
 .TitleBox > p {
     color: grey;
-    font-size: 55px;
 }
 .TitleBox > h3 {
     color: #1c1c1c;
-    font-size: 75px;
 }
 .But {
     margin-bottom: 15px;
-    font-size: 22px;
-    padding: 10px 50px;
     border: 2px solid #1c1c1c;
     outline: none;
 }
@@ -105,4 +103,104 @@ input, textarea, select {
     margin-bottom: 15px;
     border-radius: 5px;
     overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 320px) {
+    .HomeButton {
+        font-size: 20px;
+    }
+    .TitleBox > p {
+        font-size: 25px;
+    }
+    .TitleBox > h3 {
+        font-size: 35px;
+    }
+    .But {
+        padding: 10px 50px;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 360px) {
+    .HomeButton {
+        font-size: 25px;
+    }
+    .TitleBox > p {
+        font-size: 50px;
+    }
+    .TitleBox > h3 {
+        font-size: 70px;
+    }
+    .But {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 390px) {
+    .HomeButton {
+        font-size: 30px;
+    }
+    .TitleBox > p {
+        font-size: 55px;
+    }
+    .TitleBox > h3 {
+        font-size: 75px;
+    }
+    .But {
+        padding: 10px 50px;
+        font-size: 25px;
+    }
+}
+@media screen and (min-width: 414px) {
+    .HomeButton {
+        font-size: 30px;
+    }
+    .TitleBox > p {
+        font-size: 55px;
+    }
+    .TitleBox > h3 {
+        font-size: 75px;
+    }
+    .But {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 430px) {
+    .HomeButton {
+        font-size: 40px;
+    }
+    .TitleBox > p {
+        font-size: 65px;
+    }
+    .TitleBox > h3 {
+        font-size: 85px;
+    }
+    .But {
+        padding: 10px 50px;
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 600px) {
+    .LogoBox {
+        padding: 0 100px;
+    }
+    
+}
+@media screen and (min-width: 800px) {
+    .HomeButton {
+        font-size: 60px;
+    }
+    .TitleBox > p {
+        font-size: 85px;
+    }
+    .TitleBox > h3 {
+        font-size: 105px;
+    }
+    .But {
+        padding: 20px 60px;
+        font-size: 40px;
+    }
+    .LogoBox {
+        padding: 0 100px;
+    }
 }

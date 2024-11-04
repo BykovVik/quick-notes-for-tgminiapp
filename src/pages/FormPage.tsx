@@ -2,7 +2,6 @@ import React from 'react';
 import NoteForm from '../components/NoteForm';
 import HomeButton from '../components/HomeButton';
 import { GoHomeFill } from 'react-icons/go';
-import Footer from '../components/Footer';
 import { useLocation } from 'react-router-dom';
 
 const FormPage = () => {
@@ -19,7 +18,6 @@ const FormPage = () => {
                     </div>
                 </div>
             </div>
-            {<Footer/>}
         </div>
     )
 }
