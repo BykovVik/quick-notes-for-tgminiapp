@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import note from '../media/logo.png'
 import HomeButton from '../components/HomeButton';
@@ -6,6 +6,14 @@ import { FaPenSquare, FaPencilAlt, FaList } from 'react-icons/fa';
 
 const HomePage = () => {
 
+    useEffect(() => {
+        if (window.Telegram?.WebApp) {
+            window.Telegram.WebApp.ready();
+            window.Telegram.WebApp.expand();
+        } else {
+            console.log("Telegram Web App SDK не доступен");
+        }
+    }, []);
     const navigate = useNavigate()
 
     const addNoteHandler = () => {
