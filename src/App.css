@@ -55,7 +55,7 @@ input, textarea, select {
     font-size: 18px;
 }
 .LogoBox {
-    padding: 0;
+    padding: 0 30px;
 }
 .TitleBox {
     line-height: 1px;
